@@ -1,18 +1,18 @@
+import java.util.HashMap;
+
 class Solution {
     public String solution(String rsp) {
-        String answer = "";
+        HashMap<Character, Character> winMap = new HashMap<>();
+        winMap.put('2','0');
+        winMap.put('0','5');
+        winMap.put('5','2');
         
-        for(int i=0; i < rsp.length(); i++){
+        StringBuilder answer = new StringBuilder();
+        
+        for(int i = 0; i < rsp.length(); i++){
             char ch = rsp.charAt(i);
-            
-            if (ch == '2'){
-                answer = answer + '0';
-            } else if (ch == '0') {
-                answer = answer + '5';
-            } else if (ch == '5') {
-                answer = answer + '2';
-            }
+            answer.append(winMap.get(ch));
         }
-        return answer;
+        return answer.toString();
     }
 }
