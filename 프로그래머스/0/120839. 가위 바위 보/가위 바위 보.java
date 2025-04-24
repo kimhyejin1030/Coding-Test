@@ -1,17 +1,17 @@
-import java.util.HashMap;
-
 class Solution {
     public String solution(String rsp) {
-        HashMap<Character, Character> winMap = new HashMap<>();
-        winMap.put('2','0');
-        winMap.put('0','5');
-        winMap.put('5','2');
-        
         StringBuilder answer = new StringBuilder();
         
-        for(int i = 0; i < rsp.length(); i++){
+        for(int i=0; i<rsp.length(); i++){
             char ch = rsp.charAt(i);
-            answer.append(winMap.get(ch));
+            
+            if(ch=='2'){
+                answer.append('0');
+            } else if (ch =='0') {
+                answer.append('5');
+            } else if ( ch == '5') {
+                answer.append('2');
+            }
         }
         return answer.toString();
     }
