@@ -1,11 +1,10 @@
 class Solution {
     public int solution(int n) {
-        int pices = 6;
+        int answer = 1;
         
-        while(pices % n != 0){
-            pices += 6;
+        while(6 * answer % n != 0) {
+            answer++;
         }
-        
-        return pices / 6;
+        return answer;
     }
 }
