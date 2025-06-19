@@ -3,9 +3,13 @@ class Solution {
         int[] answer = new int[2];
         
         for (int num : num_list) {
-            if (num % 2 ==0) answer[0]++;
-            else answer[1]++;
+            if (num % 2 == 0) {
+                answer[0]++;
+            } else {
+                answer[1]++;
+            }
         }
+        
         return answer;
     }
 }
