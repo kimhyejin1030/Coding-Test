@@ -3,8 +3,8 @@ class Solution {
         String answer = "";
         String[] arr = my_string.split("");
         
-        for(int i = 0; i < arr.length; i++){
-            answer += arr[i].repeat(n);
+        for(int i = 0; i < arr.length; i++) {
+            answer += arr[i].repeat(n);        
         }
         return answer;
     }
