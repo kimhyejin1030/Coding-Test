@@ -1,11 +1,9 @@
+import java.util.stream.Collectors;
+
 class Solution {
     public String solution(String my_string, int n) {
-        StringBuilder sb = new StringBuilder();
-
-        for (String ch : my_string.split("")) {
-            sb.append(ch.repeat(n));
-        }
-
-        return sb.toString();
+        return my_string.chars()
+                .mapToObj(c -> String.valueOf((char) c).repeat(n))
+                .collect(Collectors.joining());
     }
 }
