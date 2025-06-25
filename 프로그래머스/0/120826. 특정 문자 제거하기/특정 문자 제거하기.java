@@ -1,10 +1,15 @@
 class Solution {
     public String solution(String my_string, String letter) {
-        String answer = "";
+        StringBuilder sb = new StringBuilder();
         
-        my_string = my_string.replaceAll(letter,"");
-        answer = my_string;
-        
-        return answer;
+        for(int i = 0; i < my_string.length(); i++){
+            char ch = my_string.charAt(i);
+            
+            // letter의 첫 글자와 비교
+            if(ch != letter.charAt(0)) {
+                sb.append(ch);
+            }
+        }
+        return sb.toString();
     }
 }
