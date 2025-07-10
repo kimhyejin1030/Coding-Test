@@ -3,7 +3,6 @@ import java.util.Arrays;
 class Solution {
     public int solution(int[] numbers) {
         Arrays.sort(numbers);
-        int n = numbers.length;
-        return numbers[n-1] * numbers[n-2];
+        return numbers[numbers.length-1] * numbers[numbers.length-2];
     }
 }
