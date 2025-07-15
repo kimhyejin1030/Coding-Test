@@ -8,7 +8,7 @@ class Solution {
         for(int i=0; i < result.length(); i++) {
             answer[i] = Character.getNumericValue(result.charAt(i));
         }
-        Arrays.toString(answer);
+
         Arrays.sort(answer);
         return answer;
     }
