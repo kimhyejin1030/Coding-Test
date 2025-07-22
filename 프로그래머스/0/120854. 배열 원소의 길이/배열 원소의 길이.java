@@ -1,8 +1,9 @@
 class Solution {
     public int[] solution(String[] strlist) {
         int[] answer = new int[strlist.length];
-        for(int i = 0; i<strlist.length; i++) {
-            answer[i] = strlist[i].length();
+        int idx = 0;
+        for (String s : strlist) {
+            answer[idx++] = s.length();
         }
         return answer;
     }
