@@ -1,16 +1,19 @@
 class Solution {
     public String solution(String my_string) {
-        String answer = "";
+        StringBuilder sb = new StringBuilder();
         
-        for(int i=0; i < my_string.length(); i++) {
+        for(int i = 0; i < my_string.length(); i++) {
             char ch = my_string.charAt(i);
             
             if(Character.isLowerCase(ch)) {
-                answer += Character.toUpperCase(ch);
+                sb.append(Character.toUpperCase(ch));
+            } else if (Character.isUpperCase(ch)) {
+                sb.append(Character.toLowerCase(ch));
             } else {
-                answer += Character.toLowerCase(ch);
+                sb.append(ch);
             }
         }
-        return answer;
+
+        return sb.toString();
     }
 }
