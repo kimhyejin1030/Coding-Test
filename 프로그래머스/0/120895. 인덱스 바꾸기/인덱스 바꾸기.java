@@ -6,7 +6,7 @@ class Solution {
         arr[num1] = arr[num2];
         arr[num2] = temp;
         
-        String str = new String(arr);
+        String str = new String(arr);        
         
         return str;
     }
