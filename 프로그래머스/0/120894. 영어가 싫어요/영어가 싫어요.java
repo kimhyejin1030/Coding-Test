@@ -12,8 +12,7 @@ class Solution {
                          .replace("eight","8")
                          .replace("nine","9");
         
-        long answer = Long.parseLong(numbers);
         
-        return answer;
+        return Long.parseLong(numbers);
     }
 }
